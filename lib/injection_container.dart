@@ -35,7 +35,7 @@ Future<void> init() async {
 
   // data sources
   sl.registerLazySingleton<LocalDataSource>(
-      () => LocalDataSourceImpl(sharedPreferences: sl()));
+      () => LocalDataSourceWithHive());
   sl.registerLazySingleton<RemoteDataSource>(
       () => RemoteDataSourceImpl(client: sl()));
 
